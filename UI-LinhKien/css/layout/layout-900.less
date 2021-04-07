@@ -1,0 +1,48 @@
+@media screen and (max-width: 900px) {
+  div.my-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 200vh;
+    background-color: silver;
+
+    div.banner-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr;
+      background-color: white;
+      > div {
+        height: 5em;
+      }
+      div.logo {
+        grid-column: 1 / span 3;
+        height: 9em;
+        .flex-center;
+        img {
+          .cover-img;
+          max-width: none;
+        }
+      }
+      div.search {
+        .flex-center;
+      }
+      div.order {
+        .flex-center;
+        a,
+        span {
+          margin: 0.25rem;
+        }
+      }
+      div.hotline {
+        .flex-center;
+        span {
+          margin-left: 0.5rem;
+          b {
+            display: block;
+            color: red;
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+}

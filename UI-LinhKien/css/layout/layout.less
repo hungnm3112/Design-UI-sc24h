@@ -1,0 +1,71 @@
+div.my-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 200vh;
+  background-color: silver;
+
+  div.banner-top {
+    display: grid;
+    grid-template-columns: 5fr 4fr 3fr 5fr;
+    background-color: white;
+    > div {
+      height: 80px;
+    }
+    div.logo {
+      .flex-center;
+      justify-content: start;
+      img {
+        max-width: 326px;
+      }
+    }
+    div.search {
+      .flex-center;
+    }
+    div.order {
+      .flex-center;
+      a,
+      span {
+        margin: 0.25rem;
+      }
+    }
+    div.hotline {
+      .flex-center;
+      span {
+        margin-left: 0.5rem;  
+        b {
+          display: block;
+          color: red;
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@import url("/css/layout/layout-900.less");
+@import url("/css/layout/layout-600.less");
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@main-color-1: #007bff;
+
+body {
+  font-family: "16/20px Playfair display";
+}
+.icon {
+  color: @main-color-1;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cover-img {
+    height: 100%;
+    width: 100%;
+    border-radius: calc(0.25rem - 1px);
+    object-fit: contain;
+    background: none;
+    margin: auto;
+    display: block;
+  }
