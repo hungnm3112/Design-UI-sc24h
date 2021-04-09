@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+
+@main-color-1: #007bff;
+@main-color-2: #2a86c8;
+@main-color-5: silver !important;
+@b: 0.5rem;
+body {
+  font-family: "16/20px Playfair display";
+}
+.icon {
+  color: @main-color-1;
+}
+.bg24h{
+  background-color: @main-color-1;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cover-img {
+  height: 100%;
+  width: 100%;
+  border-radius: calc(0.25rem - 1px);
+  object-fit: contain;
+  background: none;
+  margin: auto;
+  display: block;
+}
+.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+} 
+
+.multi-shadow {
+  -moz-box-shadow: @b @b @b @main-color-5, -@b @b @b @main-color-5;
+  -webkit-box-shadow: @b @b @b @main-color-5, -@b @b @b @main-color-5;
+  box-shadow: @b @b @b @main-color-5, -@b @b @b @main-color-5;
+}
+
+
+@import url("topbanner.less");
+@import url("menutop.less");

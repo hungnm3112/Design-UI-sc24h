@@ -1,18 +1,7 @@
 @media screen and (max-width: 600px) {
-  div.my-container {
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-    height: 200vh;
-    background-color: silver;
-
-    div.banner-top {
-      display: grid;
-      grid-template-columns:60% 20% 20%;
-      background-color: white;
-      > div {
-        height: 5em;
-      }
+  div.my-container {    
+    div.banner-top {      
+      grid-template-columns:60% 20% 20%;            
       div.logo {
         grid-column: 1 / span 3;
         height: 9em;        
@@ -20,15 +9,8 @@
           .cover-img;
           max-width: none;
         }
-      }
-      div.search {
-        margin-left: 0.5rem;
-                
-      }
-      div.order {        
-        a{
-          margin: 0.5rem;
-        }
+      }      
+      div.order {                
         span {
           display:none;
         }

@@ -2,63 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linh kiện</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linh kiện</title>
 
-    <!-- FontAwesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <script defer src="/js/all-FontAwesome.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- FontAwesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script defer src="/js/all-FontAwesome.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <!-- My CSS-->    
-    <link rel="stylesheet/less/" type="text/less" href="css/layout/layout.less" />
-    
-    <script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>
+  <!-- My CSS-->
+  <link rel="stylesheet/less/" type="text/less" href="css/layout/layout.less" />
+  <link rel="stylesheet/less/" type="text/less" href="css/style/index.less" />
+
+  <!-- Css Event-->
+  <link rel="stylesheet/less/" type="text/less" href="css/event/menutop.less" />
+
+  <script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>
 
 </head>
 
 <body>
-    <div class="my-container">
-        <div class="banner-top">
-            <div class="logo"><img src="/img/logo-web.png" alt="Sửa chữa laptop 24h"
-                    title="Suachualaptop24h - Số 1 về dịch vụ sửa chữa laptop"></div>
-            <div class="search">
-                <form class="form-inline" action="/somepage">
-                    <input class="form-control" type="text" placeholder="Tìm kiếm" />
-                </form>
-            </div>
-            <div class="order">
-                <a href="#" title="Đặt lịch sửa chữa"><i class="far fa-calendar-alt fa-3x "></i></a>
-                <span>
-                    Đặt lịch <br />sửa chữa
-                </span>
-            </div>
-            <div class="hotline">
-                <i class="icon fas fa-headphones-alt fa-3x" title="Hotline miễn phí 1800 6024"></i>
-                <span>
-                    Hotline miễn phí <b>1800 6024</b>
-                </span>
-            </div>
-        </div>
+  <div class="my-container">
+    <div class="banner-top multi-shadow">
+      <div class="logo"><img src="/img/logo-web.png" alt="Sửa chữa laptop 24h"
+          title="Suachualaptop24h - Số 1 về dịch vụ sửa chữa laptop"></div>
+      <div class="search">
+        <form class="form-inline" action="/somepage">
+          <input class="form-control" type="text" placeholder="Tìm kiếm" />
+        </form>
+      </div>
+      <div class="order">
+        <a href="#" title="Đặt lịch sửa chữa"><i class="far fa-calendar-alt fa-3x "></i></a>
+        <span>
+          Đặt lịch <br />sửa chữa
+        </span>
+      </div>
+      <div class="hotline">
+        <i class="icon fas fa-headphones-alt fa-3x" title="Hotline miễn phí 1800 6024"></i>
+        <span>
+          Hotline miễn phí <b>1800 6024</b>
+        </span>
+      </div>
     </div>
+    <div class="menu-top multi-shadow bg24h">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><i class="fas fa-laptop-house fa-lg"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <!-- Giới thiệu -->
+            <li class="nav-item dropdown" id="menu-top-gioithieu">
+              <a class="nav-link" href="https://suachualaptop24h.com/gioi-thieu/gioi-thieu-n6446.html"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Giới thiệu
+              </a>
+            </li>
+            <!-- Dịch vụ -->
+            <li class="nav-item dropdown" id="menu-top-dichvu">
+              <a class="nav-link" href="https://suachualaptop24h.com/sua-chua.html" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Dịch vụ
+              </a>
+            </li>
+            <!-- Linh kiện -->
+            <li class="nav-item dropdown" id="menu-top-linhkien">
+              <a class="nav-link" href="https://suachualaptop24h.com/linh-kien-laptop-pc618.html" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Linh kiện
+              </a>
+            </li>
+            <!-- Phụ kiện-->
+            <li class="nav-item dropdown" id="menu-top-phukien">
+              <a class="nav-link" href="https://suachualaptop24h.com/phu-kien-laptop-pc724.html" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Phụ kiện
+              </a>
+            </li>
+            <!-- Góc chia sẻ-->
+            <li class="nav-item dropdown" id="menu-top-gocchiase">
+              <a class="nav-link" href="https://suachualaptop24h.com/goc-chia-se-kn926.html" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Góc chia sẻ
+              </a>
+            </li>
+            <!-- Laptop-->
+            <li class="nav-item dropdown" id="menu-top-laptop">
+              <a class="nav-link" href="https://ap24h.vn/laptop-pc326.html" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Laptop
+              </a>
+            </li>
+            <!-- Báo giá-->
+            <li class="nav-item dropdown" id="menu-top-baogia">
+              <a class="nav-link" href="https://suachualaptop24h.com/bao-gia-kn880.html" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Báo giá
+              </a>
+            </li>
+            <!-- Liên hệ-->
+            <li class="nav-item dropdown" id="menu-top-lienhe">
+              <a href="https://suachualaptop24h.com/he-thong-cua-hang.html" class="nav-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Liên hệ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
 
-
-
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- Javascript process on mobile-->
+  <script type="text/javascript" src="js/mobile/checkMobileDevice.js"></script>
+  <!-- Javascript process create data-->
+  <script type="text/javascript" src="js/data/menu-top.js"></script>
+  <script type="text/javascript" src="js/business/menu-top-func.js"></script>
+  <!-- Javascript event-->
+  <script type="text/javascript" src="js/event/multi-navbar.js"></script>
 </body>
 
 </html>
