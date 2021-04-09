@@ -59,7 +59,13 @@ function addMenu() {
   li = document.querySelector("li#menu-top-baogia");
   li.appendChild(ul);
 
-  if (!isMobileLK) {
+  //Add link menu top
+  if (isMobileLK) {
+    let aTag = document.querySelector("div.menu-top>nav a.nav-link.haspopup");
+    aTag.addEventListener("click",(events)=>{        
+        window.location.href = events.target.getAttribute("href")
+    });
+  }else{
     addLink();
   }  
 }

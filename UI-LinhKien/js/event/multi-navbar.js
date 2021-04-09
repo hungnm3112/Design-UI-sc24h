@@ -12,7 +12,7 @@ $(".dropdown-menu div.icon-toggle").click(function (e) {
       $(".dropdown-submenu .show").removeClass("show");
     });
   
- // hideFadeContent()  
+  hideFadeContent()  
   return false;
 });
 

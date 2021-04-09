@@ -1,9 +1,37 @@
 @media screen and (max-width: 600px) {
-  div.my-container {    
-    div.banner-top {            
-      div.logo {        
-        height: 6em;                
-      }            
+  div.my-container {
+    div.catalog {
+      div.menu-left {
+        ul {          
+          li {
+            a {
+              div.text-menu-left {
+              }
+            }
+          }
+        }
+      }
+      div.hot-slide {
+        grid-column: 1/ span 2;
+        div.tab-content {
+        }
+        div.carousel.slide {
+          ol.carousel-indicators {
+          }
+          div.carousel-inner {
+            div.carousel-item {
+              img {
+              }
+            }
+          }
+        }
+      }
+      div.hot-services {
+        grid-column: 1/ span 2;
+        grid-template-columns: auto auto;
+        img {
+        }
+      }
     }
   }
 }
