@@ -18,20 +18,19 @@ function showLess(group) {
 }
 
 function createCard(name) {
-  let maxA = 5;
+  let maxA = 4;
   let card = document.createElement("div");
-  card.setAttribute("class", "card border-white");
-  card.setAttribute("style", "max-width:170px");
+  //card.setAttribute("style", "margin-left:10px;margin-right:10px");
   let body = document.createElement("div");
-  body.setAttribute("class", "card-body");
+  //body.setAttribute("class", "card-body");
   let title = document.createElement("h4");
-  title.setAttribute("class", "card-title");
+  //title.setAttribute("class", "card-title");
   let text = document.createElement("p");
-  text.setAttribute("class", "card-text");
+  //text.setAttribute("class", "card-text");
 
   title.innerHTML = name.title;
   let div = document.createElement("div");
-  div.setAttribute("class", "list-group");
+  //div.setAttribute("class", "list-group");
   let html = "";
   let count = 1;
   for (let value of name.values) {
@@ -59,22 +58,10 @@ function createCard(name) {
 
 function createCardDeck(vJson) {
   let cardDeck = document.createElement("div");
-  cardDeck.setAttribute("class", "card-group mt-2 mr-2");
-  let count = 0;
+  cardDeck.setAttribute("class", "myCard");
   for (let h of vJson) {
     let card = createCard(h);
     cardDeck.appendChild(card);
-    count++;
-    if (count % 2 == 0) {
-      let wrapONsm = document.createElement("div");
-      wrapONsm.setAttribute("class", "w-100 d-none d-sm-block d-md-none");
-      cardDeck.appendChild(wrapONsm);
-    }
-    if (count % 3 == 0) {
-      let wrapONmd = document.createElement("div");
-      wrapONmd.setAttribute("class", "w-100 d-none d-md-block d-xl-none");
-      cardDeck.appendChild(wrapONmd);
-    }
   }
   categoryIndex++;
   return cardDeck;
