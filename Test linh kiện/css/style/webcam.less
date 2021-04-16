@@ -1,0 +1,75 @@
+.main-body {
+  .right-content {
+    font-size: 1.2em;
+    .tool-check {
+      .title {
+        font-weight: bolder;
+        font-size: xxx-large;
+        text-transform: uppercase;
+        color: @main-color-1;
+      }
+      .header {
+        font-size: 1.5em;
+        color: rgb(67, 111, 142);
+      }
+      .description {        
+        .top {          
+          span {
+            color: rgb(67, 111, 142);
+            font-size: 1.5em;
+          }
+        }
+        .body {
+          ul > li {
+            font-family: "Open Sans";
+            font-weight: 600;            
+            list-style-type: decimal;
+          }
+          span {
+            color: rgb(226, 92, 27);
+            font-size: 1.2em;            
+            &:last-child {
+              font-style: italic;
+              color: rgb(102, 102, 102);
+            }
+          }
+        }
+      }
+      .webcam {
+        #video {
+          background-color: black;
+        }
+        #btnStart {
+          color: white;
+        }
+      }
+    }
+    .guide {
+      h1{
+        color:rgb(226, 92, 27)
+      }
+      ul > li {
+        list-style-type: none;
+        font-size: 1.2em;
+         svg {
+          transform: rotate(45deg);
+          margin-right: 1em;          
+        }
+      }
+    }
+    .moreInformation{      
+      font-size: 1.2em;
+      h1{
+        color:rgb(226, 92, 27)
+      }
+      div{
+        h2{
+          color: rgb(67, 111, 142);
+        }
+        span{
+
+        }
+      }
+    }
+  }
+}
