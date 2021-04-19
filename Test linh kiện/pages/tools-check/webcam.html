@@ -24,6 +24,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- JS tools check-->
+    <script src="../../js/lib/VideoFrame-min.js" type="text/javascript"></script>
     <script src="../../js/lib/adapter.js" type="text/javascript"></script>
     <script src="../../js/tools/webcam.js" type="text/javascript"></script>
 
@@ -34,7 +35,6 @@
 </head>
 
 <body>
-
     <section class="tool-check">
         <div class="title">Kiểm tra webcam</div>
         <div class="header">
@@ -67,6 +67,7 @@
         <div class="webcam">
             <video id="video"></video>
             <i id="btnStart" class="fas fa-play-circle fa-10x" onclick="startup()"></i>
+            <div class="info_FPS"></div>
         </div>
         <div class="qc-1">
             <a href="ct-sua-laptop-lay-ngay-trong-01-gio.html"

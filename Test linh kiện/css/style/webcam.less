@@ -25,7 +25,7 @@ body {
           list-style-type: decimal;
         }
         span {
-          color: rgb(226, 92, 27);
+          color: @main-color-3;
           font-size: 1.2em;
           &:last-child {
             font-style: italic;
@@ -34,10 +34,16 @@ body {
         }
       }
     }
+    .webcam{
+      .info_FPS{
+        background-color: white;
+        font-weight: 600;
+      }
+    }
   }
   .guide {
     h1 {
-      color: rgb(226, 92, 27);
+      color: @main-color-3;
     }
     ul > li {
       list-style-type: none;
@@ -51,13 +57,19 @@ body {
   .moreInformation {
     font-size: 1.2em;
     h1 {
-      color: rgb(226, 92, 27);
+      color: @main-color-3;
     }
     div {
       h2 {
         color: rgb(67, 111, 142);
       }
-      span {
+      p {
+        b{
+          font-weight: 500;          
+          i{
+            color:red;
+          }
+        }
       }
     }
   }
