@@ -1,31 +1,28 @@
 .tool-check {
   display: grid;
   grid-template-columns: 55% 45%;
-  grid-gap: 1em;
   .header {
     grid-column: 1 / span 2;
   }
   .description {
-    .body {
-      display: block;
-      margin-top: 0.5em;
-      span {
-        display: flex;
-        justify-content: center;
-        &:first-child {
-          margin-bottom: 1em;
-          justify-content: flex-start;
-        }
-        &:last-child{
-          text-align: center;
-        }
-      }
+    padding-right: 1em;
+    display: block;
+    margin-top: 0.5em;
+    span {      
+      display:flex;
+      flex-direction: column;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 1em;
+        text-align: start;
+      }      
     }
   }
   .webcam {
-    width: 27em;
-    height: 21em;
+    width: 95%;
+    height: 100%;
     position: relative;
+    padding-right: 3%;
     .flex-center;
     #video {
       z-index: 99;
@@ -47,13 +44,14 @@
       opacity: 0;
       .flex-center;
     }
-    .error_msg{
+    .error_msg {
       text-align: center;
       vertical-align: center;
     }
   }
   .qc-1 {
     grid-column: 1 / span 2;
+    margin-top: 3em;
     .flex-center;
     img {
       height: 10em;
@@ -64,6 +62,7 @@
   margin-top: 3em;
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-row-gap: 1em;
   .title {
     grid-column: 1 / span 2;
     display: grid;
@@ -96,7 +95,6 @@
     h2 {
     }
     span {
-      
     }
   }
 }

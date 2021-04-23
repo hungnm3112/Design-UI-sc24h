@@ -1,64 +1,62 @@
 body {
-  font-size: 1.2em;
   .tool-check {
     .title {
       font-weight: bolder;
-      font-size: xxx-large;
+      font-size: xx-large;
       text-transform: uppercase;
       color: @main-color-1;
     }
     .header {
       font-size: 1.5em;
       color: rgb(67, 111, 142);
+      margin-bottom: 1em;
     }
     .description {
-      .top {
-        span {
-          color: rgb(67, 111, 142);
-          font-size: 1.5em;
-        }
+      ul > li {
+        font-family: "Open Sans";
+        font-weight: 600;
+        list-style-type: decimal;
+        font-size: 1.2em;
       }
-      .body {
-        ul > li {
-          font-family: "Open Sans";
-          font-weight: 600;
-          list-style-type: decimal;
-        }
-        span {
+      span {
+        font-size: 1em;
+        font-style: italic;
+        color: rgb(102, 102, 102);
+        &:last-child {
           color: @main-color-3;
-          font-size: 1.2em;
-          &:last-child {
-            font-style: italic;
-            color: rgb(102, 102, 102);
-          }
+          font-style: normal;
         }
       }
     }
-    .webcam{
-      .info_FPS{
+    .webcam {
+      .info_FPS {
         background-color: white;
         font-weight: 600;
       }
-      .error_msg{
+      .error_msg {
         font-size: 2em;
         font-weight: 600;
-        color:@main-color-3;        
+        color: @main-color-3;
       }
-      #video{
+      #video {
         background-color: black;
-      }      
+      }
     }
   }
   .guide {
     h1 {
       color: @main-color-3;
     }
-    ul > li {
-      list-style-type: none;
-      font-size: 1.2em;
-      svg {
-        transform: rotate(45deg);
-        margin-right: 1em;
+    ul {
+      padding-left: 0;
+      padding-right: 2em;
+      li {
+        list-style-type: none;
+        font-size: 1.2em;
+        svg {
+          transform: rotate(45deg);
+          margin-right: 1em;
+        }
       }
     }
   }
@@ -72,10 +70,10 @@ body {
         color: rgb(67, 111, 142);
       }
       p {
-        b{
-          font-weight: 500;          
-          i{
-            color:red;
+        b {
+          font-weight: 500;
+          i {
+            color: red;
           }
         }
       }

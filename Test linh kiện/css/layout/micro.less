@@ -1,7 +1,6 @@
 .tool-check {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-gap: 1em;
   .title{
     grid-column: 1 / span 2;
     grid-row: 1;
@@ -20,11 +19,14 @@
   >p{    
     grid-column: 2; 
     text-align:center;
+    width: 90%;
+    padding-left: 3%;
   }
   .microphone {
     grid-row: 3;
-    width: 40em;
+    width: 90%;
     height: 10em;
+    padding-left: 5%;
     position: relative;
     .flex-center;
     .audio {
@@ -63,15 +65,18 @@
 .guide {
   margin: 3em 0em;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 1em;
+  grid-template-columns: 50% 50%;  
+  div{
+    padding-right: 2em;
+  }
   .title {
     grid-column: 1 / span 2;
     display: grid;
     grid-template-columns: 20% 80%;    
-  }      
+    padding-right: 0;
+  }        
   ul{
-    padding-left: 0;;
+    padding-left: 0;    
   }
 }
 .moreInformation {
