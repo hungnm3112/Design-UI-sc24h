@@ -1,19 +1,25 @@
-
-.main-body {  
+.main-body {
   .left-menu {
     .menu {
       nav > div > ul {
         > li {
+          border-bottom: 0.2px solid @main-color-4;
+          &:last-child {
+            border-bottom: none;
+          }
           &:hover {
-            background-color: silver;
+            background-color: @main-color-2 !important;
           }
           > a {
             text-transform: uppercase;
-            color: @main-color-1;
-            font-size: 1.2em !important;                        
-          }          
+            color: @main-color-1 !important;
+            font-size: 1em !important;
+            &:hover {
+              color: white !important;
+            }
+          }
           a {
-            font-size: 1.1em;
+            font-size: 1.1em;            
             .icon-toggle {
               display: block;
               float: right;
@@ -27,18 +33,24 @@
               transform: rotate(-90deg);
             }
           }
-          &:last-child{
-            >a>.icon-toggle{
+          &:last-child {
+            > a > .icon-toggle {
               margin-top: 0.1em;
             }
           }
+          >ul>li{
+            border-bottom: 0.2px solid @main-color-4;
+            &:last-child{
+              border-bottom: none;
+            }
+          }          
         }
       }
     }
   }
+  .right-content {
+  }
 }
 
-@import url("webcam.less");
 @import url("menutop.less");
 @import url("top-banner.less");
-

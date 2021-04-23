@@ -25,37 +25,36 @@ body {
           list-style-type: decimal;
         }
         span {
-          color: @main-color-3;
-          font-size: 1.2em;
-          &:last-child {
-            font-style: italic;
-            color: rgb(102, 102, 102);
-          }
+          text-align: start;
+          color: @main-color-3;                
         }
       }
     }
-    .webcam{
+    p{
+      font-style: italic;
+      color: rgb(102, 102, 102);
+    }
+    .microphone{
       .info_FPS{
         background-color: white;
         font-weight: 600;
       }
       .error_msg{
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: 600;
         color:@main-color-3;        
       }
-      #video{
+      .audio{
         background-color: black;
       }      
     }
   }
-  .guide {
+  .guide {    
     h1 {
-      color: @main-color-3;
-    }
+      color: @main-color-3;      
+    }    
     ul > li {
-      list-style-type: none;
-      font-size: 1.2em;
+      list-style-type: none;      
       svg {
         transform: rotate(45deg);
         margin-right: 1em;

@@ -4,8 +4,6 @@ function startup() {
   var streaming = false;
   video = document.getElementById("video");
   infoFPS = document.querySelector("div.info_FPS");
-  console.log(navigator)
-  
   navigator.mediaDevices
     .getUserMedia({ video: true, audio: false })
     .then(function (stream) {
@@ -14,6 +12,20 @@ function startup() {
     })
     .catch(function (err) {
       console.log("An error occurred: " + err);
+      switch (err.name) {
+        case "NotFoundError":
+          err.msg =
+            "Chúng tôi không tìm thấy webcam/máy ảnh của bạn. Bạn hãy chắc chắn rằng nó đã được kết nối và đã được bật.";
+          break;
+        case "NotAllowedError":
+          err.msg =
+            "Bạn chưa cấp phép cho trình duyệt truy cập vào webcam/ máy ảnh của bạn, vui lòng tắt trình duyệt và thử lại.";
+          break;
+        default:
+          err.msg =
+            "Đã có lỗi xảy ra khi kiểm tra thiết bị của bạn, hãy thử lại bằng trình duyệt khác.";
+      }
+      errorMsg(err);
     });
 
   video.addEventListener(
@@ -24,25 +36,26 @@ function startup() {
         video.setAttribute("width", width);
         video.setAttribute("height", height);
         streaming = true;
+        infoFPS.setAttribute("style","opacity:0.5")
         document
           .getElementById("btnStart")
           .setAttribute("style", "display:none");
 
-        videoF =  VideoFrame({
-            id: "video",
-            frameRate: 25,
-            callback: function (frame) {              
-              let currentTime = videoF.video.currentTime.toFixed(5);
-              let time = currentTime - lastTime
-              if(time>=1){
-                lastTime=currentTime;                
-                let fps = Math.round((frame-lastFrame)/time * 100) / 100
-                infoFPS.innerHTML = `${fps} FPS`;
-                lastFrame = frame;
-              }
-            },
-          });  
-        Change()  
+        videoF = VideoFrame({
+          id: "video",
+          frameRate: 25,
+          callback: function (frame) {
+            let currentTime = videoF.video.currentTime.toFixed(5);
+            let time = currentTime - lastTime;
+            if (time >= 1) {
+              lastTime = currentTime;
+              let fps = Math.round(((frame - lastFrame) / time) * 100) / 100;
+              infoFPS.innerHTML = `${fps} FPS`;
+              lastFrame = frame;
+            }
+          },
+        });
+        Change();
       }
     },
     false
@@ -56,12 +69,14 @@ var lastTime = 0;
 var lastFrame = 0;
 function Change() {
   videoF.listen("frame");
-  lastTime = videoF.video.currentTime.toFixed(5);  
-  // if (videoF.video.paused) {
-  //   videoF.video.play();
-  //   videoF.listen("frame");
-  // } else {
-  //   videoF.video.pause();
-  //   videoF.stopListen();
-  // }
+  lastTime = videoF.video.currentTime.toFixed(5);
+}
+
+function errorMsg(error) {
+  document.querySelector('div.error_msg').innerHTML = `<p>${error.msg}</p>`;  
+  document.querySelector('#btnStart').setAttribute("style","display:none;");
+  document.querySelector('#video').setAttribute("style","background-color:unset;");
+  if (typeof error !== 'undefined') {
+    console.log(error);
+  }
 }
