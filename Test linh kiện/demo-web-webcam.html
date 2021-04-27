@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    function preloadFunc() {
+        let html = document.querySelector('body')
+        html.innerHTML = `<iframe id="my-frame" frameborder="0" scrolling="no" src="https://hung.demoweb184.xyz/" style="width:100%"></iframe>`;
+    }
+    window.onpaint = preloadFunc();
+    window.addEventListener("message",(event)=>{
+        if(event.data.event_id==="tools_check"){
+            let height = event.data.data.height
+            document.querySelector("#my-frame").height = height;
+        }
+    })
+</script>
