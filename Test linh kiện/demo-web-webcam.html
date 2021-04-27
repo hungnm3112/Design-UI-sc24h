@@ -1,7 +1,7 @@
 <script type="text/javascript">
     function preloadFunc() {
         let html = document.querySelector('body')
-        html.innerHTML = `<iframe id="my-frame" frameborder="0" scrolling="no" src="https://hung.demoweb184.xyz/" style="width:100%"></iframe>`;
+        html.innerHTML = `<iframe id="my-frame" allow="camera;microphone" frameborder="0" scrolling="no" src="https://hung.demoweb184.xyz/" style="width:100%"></iframe>`;
     }
     window.onpaint = preloadFunc();
     window.addEventListener("message",(event)=>{
