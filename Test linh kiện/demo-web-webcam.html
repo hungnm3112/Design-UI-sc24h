@@ -7,7 +7,7 @@
     window.addEventListener("message", (event) => {
         if (event.data.event_id === "tools_check") {
             let height = event.data.data.height
-            document.querySelector("#my-frame").height = height;
+            document.querySelector("#my-frame").setAttribute("style",`width:100%;height:${height}`);
         }
     })
 </script>
