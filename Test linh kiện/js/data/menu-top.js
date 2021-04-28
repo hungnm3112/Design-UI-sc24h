@@ -619,36 +619,36 @@ var baogiaMenu = {
   },
 };
 
-// function getMenu(li) {
-//   let obj = "";
-//   let aTaglink = li.querySelector("a");
+function getMenu(li) {
+  let obj = "";
+  let aTaglink = li.querySelector("a");
 
-//   let temp = `"${aTaglink.innerText.trim()}":{link:"${aTaglink.href}",`;
-//   //submenu
-//   let subUl = li.querySelector("ul");
-//   let submenu = "";
-//   if (subUl) {
-//     let listLi = subUl.childNodes;
-//     for (let li of listLi) {
-//       submenu += `${getMenu(li)}`;
-//     }
-//   }
-//   temp += submenu.length == 0 ? `},` : `submenu:{${submenu}}},`;
-//   obj += temp;
-//   return obj;
-// }
-// function get() {
-//   let menuParent = document.querySelectorAll(
-//     "div.header_wrapper_wrap li.level0.menu-item"
-//   );
-//   let temp = "{";
-//   // for (menu of menuParent) {
-//   let menu = menuParent[4];
-//   console.log(menu);
-//   menu.querySelector("ul");
-//   temp += `${getMenu(menu)}`;
-//   console.log(`${getMenu(menu)}`);
-//   //}
-//   temp += "}";
-// }
-// get();
+  let temp = `"${aTaglink.innerText.trim()}":{link:"${aTaglink.href}",`;
+  //submenu
+  let subUl = li.querySelector("ul");
+  let submenu = "";
+  if (subUl) {
+    let listLi = subUl.childNodes;
+    for (let li of listLi) {
+      submenu += `${getMenu(li)}`;
+    }
+  }
+  temp += submenu.length == 0 ? `},` : `submenu:{${submenu}}},`;
+  obj += temp;
+  return obj;
+}
+function get() {
+  let menuParent = document.querySelectorAll(
+    "div.header_wrapper_wrap li.level0.menu-item"
+  );
+  let temp = "{";
+  // for (menu of menuParent) {
+  let menu = menuParent[4];
+  console.log(menu);
+  menu.querySelector("ul");
+  temp += `${getMenu(menu)}`;
+  console.log(`${getMenu(menu)}`);
+  //}
+  temp += "}";
+}
+//get();
