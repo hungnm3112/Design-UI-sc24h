@@ -158,19 +158,13 @@
       font-style: italic;
       color: rgb(102, 102, 102);
     }
-    .microphone{
-      .info_FPS{
-        background-color: white;
-        font-weight: 600;
-      }
+    .microphone{ 
+      background-color: black;           
       .error_msg{
         font-size: 1.5em;
         font-weight: 600;
         color:@main-color-3;        
-      }
-      .audio{
-        background-color: black;
-      }      
+      }            
     }
   }
   .guide {    
@@ -205,6 +199,22 @@
     }
   }
 }
+
+//tools test
+svg#visualizer {
+  display: block;
+  width: 100%;
+  height: 96px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  path {
+    stroke-linecap: square;
+    stroke: white;
+    stroke-width: 0.5px;
+  }
+}
+
 
 //utils
 @main-color-1: #007bff;

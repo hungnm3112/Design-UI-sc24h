@@ -26,15 +26,15 @@
 
     <script src="js/mobile/checkMobileDevice.js" type="text/javascript"></script>
     <!-- JS tools check-->
-    
+    <script src="js/tools/micro.js" type="text/javascript"></script>
     <!-- JS create data-->
     <script src="js/data/menu-top.js" type="text/javascript"></script>
     <script src="js/business/menu-top-func.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="css/micro.css"/>
-    <!-- My stylesheet
+   <!-- <link rel="stylesheet" href="css/micro.css" />
+     My stylesheet-->
     <link rel="stylesheet/less/" type="text/less" href="css/style/micro.less" />
     <link rel="stylesheet/less/" type="text/less" href="css/layout/micro.less" />    
-    <script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>
 
 <body>
     <div class="banner-top multi-shadow">
@@ -204,9 +204,23 @@
                         tôi không và không thể ghi lại giọng nói của bạn hoặc bất kỳ thông tin nào khác. </span>
                 </p>
                 <div class="microphone">
-                    <canvas class="audio"></canvas>
-                    <i id="btnStart" style="color: white;" class="fas fa-microphone-alt fa-3x" onclick="startup()"></i>
-                    <div class="info_FPS"></div>
+                    <svg preserveAspectRatio="none" id="visualizer" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <mask id="mask">
+                                <g id="maskGroup">
+                                </g>
+                            </mask>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff0a0a;stop-opacity:1" />
+                                <stop offset="20%" style="stop-color:#f1ff0a;stop-opacity:1" />
+                                <stop offset="90%" style="stop-color:#d923b9;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#050d61;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" mask="url(#mask)"></rect>
+                    </svg>
+                    <i id="btnStart" style="color: white;" class="fas fa-microphone-alt fa-3x" onclick="startup()"></i>                    
                     <div class="error_msg"></div>
                 </div>
                 <div class="qc-1">
@@ -214,7 +228,7 @@
                         title="Xem trực tiếp lấy ngay - Miến phí kiểm tra, tư vân">
                         <img alt="Xem trực tiếp lấy ngay - Miến phí kiểm tra, tư vân"
                             src="https://suachualaptop24h.com/images/slideshow/2020/12/01/compress2/xem-truc-tiep-lay-ngay_1606813070.jpg.webp"
-                            style="opacity: 1;"> </a>                         
+                            style="opacity: 1;"> </a>
                 </div>
             </section>
             <section class="guide">
@@ -262,25 +276,36 @@
                 <h1>Một số câu hỏi thường gặp:</h1>
                 <div>
                     <h2>Trang web cung cấp tiện ích gì khi tôi kiểm tra micro tại đây?</h2>
-                    <p>Cho dù bạn đang gặp sự cố với thu âm, nói chuyện qua các mạng xã hội (Skype, Facebook, Zalo,...) hay sử dụng phần mềm Discord - Tính năng kiểm tra micro tích hợp với dịch vụ trên đều không hoàn hảo.</p>
-                    <p>Những ứng dụng như Skype, Facebook được thiết kế với mục đích liên lạc và chúng sẽ thực hiện tốt các tính năng chính của chúng. Nhưng khi ứng dụng gặp sự cố thì việc khắc phục thông qua đó sẽ cực khó khăn.</p>
-                    <p>Tại Sửa chữa Laptop 24h .com, chúng tôi cung cấp cho bạn giải pháp đơn giản và hiệu quả nhất để kiểm tra nhanh micro để bạn có thể xử lý ngay các sự cố kết nối micro. </p>
+                    <p>Cho dù bạn đang gặp sự cố với thu âm, nói chuyện qua các mạng xã hội (Skype, Facebook, Zalo,...)
+                        hay sử dụng phần mềm Discord - Tính năng kiểm tra micro tích hợp với dịch vụ trên đều không hoàn
+                        hảo.</p>
+                    <p>Những ứng dụng như Skype, Facebook được thiết kế với mục đích liên lạc và chúng sẽ thực hiện tốt
+                        các tính năng chính của chúng. Nhưng khi ứng dụng gặp sự cố thì việc khắc phục thông qua đó sẽ
+                        cực khó khăn.</p>
+                    <p>Tại Sửa chữa Laptop 24h .com, chúng tôi cung cấp cho bạn giải pháp đơn giản và hiệu quả nhất để
+                        kiểm tra nhanh micro để bạn có thể xử lý ngay các sự cố kết nối micro. </p>
                 </div>
                 <div>
                     <h2>Vấn đề khi kiểm tra micro bằng phần mềm</h2>
-                    <p> Nếu bạn dùng phần mềm để kiểm tra micro và micro của bạn vẫn không phản hồi, bạn sẽ không thể biết chắc được nguyên nhân sự cố mà bạn đang gặp phải là do phần mềm hay do micro.</p>
+                    <p> Nếu bạn dùng phần mềm để kiểm tra micro và micro của bạn vẫn không phản hồi, bạn sẽ không thể
+                        biết chắc được nguyên nhân sự cố mà bạn đang gặp phải là do phần mềm hay do micro.</p>
                 </div>
                 <div>
                     <h2>Lợi thế khi kiểm tra micro bằng phần mềm</h2>
-                    <p>Khi sử dụng dịch vụ kiểm tra miễn phí tại đây, micro của bạn sẽ được giao tiếp đơn giản với trình duyệt - Một trong những cách kiểm tra trực tiếp đơn giản nhất.</p>
-                    <p>Nếu bạn thấy rằng micro của mình đang hoạt động tốt thì bạn có thể chắc chắn về việc vấn đề bạn đang gặp phải đều do phần mềm đang không thực hiện tốt chức năng phát hiện âm thanh.</p>
+                    <p>Khi sử dụng dịch vụ kiểm tra miễn phí tại đây, micro của bạn sẽ được giao tiếp đơn giản với trình
+                        duyệt - Một trong những cách kiểm tra trực tiếp đơn giản nhất.</p>
+                    <p>Nếu bạn thấy rằng micro của mình đang hoạt động tốt thì bạn có thể chắc chắn về việc vấn đề bạn
+                        đang gặp phải đều do phần mềm đang không thực hiện tốt chức năng phát hiện âm thanh.</p>
                 </div>
                 <div>
                     <h2>Vậy tôi cần làm gì nếu micro của tôi vẫn không hoạt động trên một số chương trình?</h2>
-                    <p>Nếu từ trang web này, bạn phát hiện được rằng micro của bạn đang hoạt động bình thường song nó vẫn xảy ra sự cố khi sử dụng phần mềm của bên thứ 3. Vậy chúng tôi khuyên bạn nên gửi phiếu yêu cầu hỗ trợ hoặc yêu cầu đội ngũ hỗ trợ của chương trình đó hỗ trợ thêm cho bạn.</p>                    
+                    <p>Nếu từ trang web này, bạn phát hiện được rằng micro của bạn đang hoạt động bình thường song nó
+                        vẫn xảy ra sự cố khi sử dụng phần mềm của bên thứ 3. Vậy chúng tôi khuyên bạn nên gửi phiếu yêu
+                        cầu hỗ trợ hoặc yêu cầu đội ngũ hỗ trợ của chương trình đó hỗ trợ thêm cho bạn.</p>
                 </div>
             </section>
         </article>
     </div>
 </body>
+
 </html>
