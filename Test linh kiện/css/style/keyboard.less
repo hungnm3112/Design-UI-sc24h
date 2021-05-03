@@ -1,0 +1,23 @@
+.keyboard {
+  background-color: rgba(0, 0, 0, 0.7);
+  > div:first-child {
+    > div {
+      > div {
+        .style-keys;
+      }
+    }
+  }
+  > div:nth-child(2) {
+  }
+  > div:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+.style-keys {
+  border: 1px white outset;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
