@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/lib/DetectBrowser.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <script language="javascript" type="text/javascript">
+        //this code handles the F5/Ctrl+F5/Ctrl+R
+        document.onkeydown = checkKeycode
+        function checkKeycode(e) {
+            var keycode;
+            if (window.event)
+                keycode = window.event.keyCode;
+            else if (e)
+                keycode = e.which;
+
+            let browser = Browser();
+            // Mozilla firefox
+            console.log(browser)
+            if (browser.isFirefox) {
+                if (keycode == 116 || (e.ctrlKey && keycode == 82)) {
+                    if (e.preventDefault) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log("Refresh is disabled")
+                    }                   
+                }
+                console.log("Refresh is...")
+            }
+            // IE
+            else if (browser.Edge) {
+                if (keycode == 116 || (window.event.ctrlKey && keycode == 82)) {
+                    window.event.returnValue = false;
+                    window.event.keyCode = 0;
+                    window.status = "Refresh is disabled";
+                }                    
+            }else{
+                if (keycode == 116 || (window.event.ctrlKey && keycode == 82)) {
+                    window.event.returnValue = false;
+                    window.event.keyCode = 0;
+                    window.status = "Refresh is disabled";
+                    console.log("Refresh is disabled")
+                }   
+                console.log("Refresh is...   "+keycode)                 
+            }
+        }
+    </script>
+
+</body>
+
+</html>
