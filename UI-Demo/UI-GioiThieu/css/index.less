@@ -1,90 +1,5 @@
-.banner-top {
-  background-color: white;
-  max-width: 1170px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 5fr 4fr 3fr 5fr;
-  > div {
-    height: 80px;
-  }
-  div.logo {
-    .flex-center;
-    justify-content: start;
-    img {
-      max-width: 326px;
-    }
-  }
-  div.search {
-    .flex-center;
-  }
-  div.order {
-    .flex-center;
-    flex-direction: row;
-    a,
-    span {
-      margin: 0.25rem;
-    }
-  }
-  div.hotline {
-    .flex-center;
-    flex-direction: row;
-    a,
-    span {
-      margin-left: 0.5rem;
-      b {
-        display: block;
-      }
-    }
-  }
-}
-.menu-top {
-  width: 100%;
-  nav {
-    max-width: 1170px;
-    margin: auto;
-    padding-top: 0;
-    padding-bottom: 0;
-    div#navbarNavDropdown {
-      > ul {
-        width: 100%;
-        justify-content: space-between;
-        li {
-          display: flex;
-          position: relative;
-          a {
-            padding-left: 0.5rem !important;
-            padding-right: 0.5rem !important;
-          }
-          div.icon-toggle {
-            display: flex;
-            align-items: center;
-            padding: 0 0.5rem;
-          }
-          ul.dropdown-menu {
-            margin-top: 0;
-            position: absolute;
-            > li {
-              ul {
-                top: 0;
-                left: 100%;
-                margin-right: 0.1rem;
-              }
-            }
-          }
-          &:nth-child(7) > ul {
-            top: 2.75rem;
-            left: -175%;
-          }
-          &:last-child > ul {
-            top: 2.75rem;
-            left: -58%;
-          }
-        }
-      }
-    }
-  }
-}
 .main-body {
+  padding-top: 1em;
   .bg-24h;
   display: grid;
   grid-template-columns: 1fr 1170px 1fr;
@@ -96,41 +11,51 @@
     #carousel-content {
       width: 100%;
       max-width: 1170px;
+      height: 439px;
       .carousel-indicators {
         bottom: -3.5em;
         > li {
           background-color: red;
         }
       }
-      .carousel-item {
-        .carousel-caption {
-          font: @font;
-          text-shadow: 5px 2px 4px black;
-          &.mission {
-            top: 20px;
-            left: 7em;
-            h1 {
-              text-align: start;
+      .carousel-inner {
+        width: 100%;
+        height: 100%;
+        .carousel-item {
+          width: 100%;
+          height: 100%;
+          > div:first-child {
+            .cover-img-background;
+          }
+          .carousel-caption {
+            font: @font;
+            text-shadow: 5px 2px 4px black;
+            &.mission {
+              top: 20px;
+              left: 7em;
+              h1 {
+                text-align: start;
+              }
+            }
+            &.core-value {
+              color: #ff8080;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              top: 0;
+              h1:first-child {
+                width: 2em;
+                height: 100%;
+              }
+              h1:nth-child(2) {
+                width: 2em;
+                height: 100%;
+              }
             }
           }
-          &.core-value {
-            color: #ff8080;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            top: 0;
-            h1:first-child {
-              width: 2em;
-              height: 100%;
-            }
-            h1:nth-child(2) {
-              width: 2em;
-              height: 100%;
-            }
+          img {
+            .cover-img;
           }
-        }
-        img {
-          .cover-img;
         }
       }
     }
@@ -155,20 +80,13 @@
             top: 0px;
             left: 0px;
             transform: rotateZ(3deg);
-            background-image: url(https://suachualaptop24h.com/templates/suachualapptop/images/Asset9.png);
+            background-image: url(../img/Asset9.png);
             background-size: 100%;
           }
         }
-        canvas {
-          width: 100%;
-          height: 1em;
-          &.c-title-brand {
-          }
-        }
-        .history-company {
-          img {
-            .cover-img;
-          }
+        canvas{
+            width: 100%;
+            height: 14px;          
         }
         .list-content {
           display: grid;
@@ -187,8 +105,12 @@
             .img {
               grid-column: 1 / span 2;
               height: 200px;
-              img {
-                .cover-img;
+              a {
+                height: 100%;
+                width: 100%;
+                img {
+                  .cover-img;
+                }
               }
             }
             h4 {
@@ -226,12 +148,12 @@
             }
           }
           @border-color-more-text: #dadce0;
-          >a{
+          > a {
             grid-column: 1 / span 3;
-            &:hover{
-              text-decoration: none;              
+            &:hover {
+              text-decoration: none;
             }
-            h5.more-content {              
+            h5.more-content {
               width: 100%;
               text-align: center;
               position: relative;
@@ -254,14 +176,13 @@
                 background-color: white;
                 border-radius: 15px;
                 border: 1px solid @border-color-more-text;
-                &:hover{
-                  background-color:#0088de;
+                &:hover {
+                  background-color: #0088de;
                   color: white;
                 }
               }
             }
           }
-          
         }
         .container {
           display: flex;
@@ -284,6 +205,20 @@
   }
 }
 
+.container {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
 .flex-center {
   display: flex;
   flex-direction: column;
@@ -297,8 +232,15 @@
   margin: auto;
   display: block;
 }
+.cover-img-background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
 .bg-24h {
-  background-color: rgb(f, f, f, 0.9);
+  background-color: rgb(255, 255, 255, 0.9);
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -327,3 +269,49 @@ body {
   -webkit-transform: scale(1.1);
   transform: scale(1.05);
 }
+
+.buttons {  
+  text-align: center;
+}
+
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.btn-hover.color-2 {
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+@import url("mobile/index.less");

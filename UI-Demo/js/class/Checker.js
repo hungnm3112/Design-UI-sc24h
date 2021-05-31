@@ -23,5 +23,7 @@
 //console.log(isMobileLK)
 class Checker{
     constructor(){}
-    isMobileLK = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    static isMobileLK(){
+        return   (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+    }
 }

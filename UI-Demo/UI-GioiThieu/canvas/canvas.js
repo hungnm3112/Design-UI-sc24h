@@ -1,9 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {  
-
+document.addEventListener("DOMContentLoaded", () => {
   //Khung cho title
-  function fillTitleCatalog(canvas) {    
+  function fillTitleCatalog(canvas) {
     if (canvas.getContext) {
-      let ctx = canvas.getContext("2d");      
+      let ctx = canvas.getContext("2d");
       let gradient = ctx.createLinearGradient(20, 0, 220, 0);
       // Add three color stops
       gradient.addColorStop(0, "green");
@@ -19,10 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
       ctx.fillStyle = gradient;
       ctx.fill();
     }
+  }  
+  if (Checker.isMobileLK()){
+    let canvasAll = Array.from(document.querySelectorAll(".c-title-branch"));
+    for (let canvas of canvasAll) {   
+      fillTitleCatalog(canvas);      
+    }
+  } else {
+    let canvasAll = Array.from(document.querySelectorAll(".c-title-branch"));
+    for (let canvas of canvasAll) {
+      fillTitleCatalog(canvas);
+    }
   }
-  let canvasAll = Array.from(document.querySelectorAll(".c-title-branch"));
-  for(let canvas of canvasAll){
-    fillTitleCatalog(canvas);
-  }
-  
+
 });

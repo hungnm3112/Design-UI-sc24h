@@ -71,12 +71,13 @@ class Address{
         let items = document.querySelectorAll(
             "footer>div.container>div.all_showroom>div.address_content>div.item"
         );
-        console.log(items)
-        arrItems = Array.from(items);
+        //console.log(items)
+        let arrItems = Array.from(items);
         let i = 0;
-        for (item of arrItems) {
+        for (let item of arrItems) {
             let aTag = item.querySelector("div.name>a");
             aTag.parentNode.setAttribute("style", "display:none");
+            aTag.setAttribute("style","color:black")
             let phone = item.querySelector("div.info>li.phone")
             let svg = phone.querySelector('svg')
             aTag.innerHTML = listPageUrl[ i ].name

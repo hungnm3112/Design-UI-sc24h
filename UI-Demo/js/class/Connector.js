@@ -3,12 +3,12 @@ class Connector {
 
   /************************************        DOM function              **********************************/
   // Tạo DOM bằng String Html
-  static createElementFromHTML(htmlString) {
+  static getDOMByUrl(url) {
     "use strict";
-    var div = document.createElement("div");
-    div.innerHTML = htmlString.trim();
-    // Change this to div.childNodes to support multiple top-level nodes
-    return div.firstChild;
+    let strHTML = Connector.httpGet(url);
+    let dom = document.createElement("html");
+    dom.innerHTML = strHTML;
+    return dom;
   }
 
   /************************************        http query               **********************************/
