@@ -1,49 +1,31 @@
 class MenuTop {
-  createMenu(ulRoot){
-    //create menu level0    
-    for(let jsonLi of this.data){
-        let li = document.createElement('li')
-        li.innerHTML=`            
-                <a class="nav-link" href="${jsonLi.href}"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  ${jsonLi.text}
-                </a>            
-        `;
-        li.setAttribute("class","nav-item dropdown")
-        if(jsonLi.child.length>0){
-            let ul = this.createSubMenu(jsonLi.child)
-            li.appendChild(ul)
-        }        
-        ulRoot.appendChild(li)
-    }
+  createMenu(ulRoot) {
+    //create menu level0
+    this.createLI(this.data, ulRoot);
   }
 
-  createSubMenu(menuJson) {
-    let ul = document.createElement("ul");
-    ul.setAttribute("class", "dropdown-menu");
-    for (let i in menuJson) {
+  createLI(menuJson, ulTag) {
+    for (let child of menuJson) {
       let li = document.createElement("li");
-      let a = document.createElement("a");
-      if (menuJson[i].submenu) {
-        let iconTag = document.createElement("div");
-        let iText =
-          '<i class="fas fa-caret-right fa-sm text-white d-inline-block"></i>';
-        iconTag.setAttribute("class", "icon-toggle");
-        iconTag.innerHTML = iText;
-        li.appendChild(iconTag);
-        let ulChild = createMenu(menuJson[i].submenu);
-        li.setAttribute("class", "dropdown-submenu");
-        li.appendChild(ulChild);
-        a.setAttribute("class", "dropdown-item");
-      } else {
-        a.setAttribute("class", "dropdown-item");
+      li.innerHTML = `
+        <a class="dropdown-item" href="${child.href}">${child.text}</a>
+      `;
+      if(child.child.length>0){
+        li.classList.add(`dropdown-submenu`)        
+        let div = document.createElement(`div`)
+        div.classList.add(`icon-toggle`)
+        div.innerHTML = `<i class="fas fa-caret-right fa-sm text-white d-inline-block"></i>`
+        li.appendChild(div)                
+        li.appendChild(this.createUL(child.child))
       }
-      a.setAttribute("href", menuJson[i].link);
-      a.innerHTML = i;
-      li.prepend(a);
-      ul.appendChild(li);    
+      ulTag.appendChild(li)
     }
-    return ul;
+  }
+  createUL(menuJson) {
+    let ul = document.createElement(`ul`)
+    ul.classList.add(`dropdown-menu`)
+    this.createLI(menuJson,ul)
+    return ul
   }
   constructor() {
     //json menu top data
