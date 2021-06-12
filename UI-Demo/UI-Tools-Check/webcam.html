@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra laptop online</title>
+    <!-- FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script defer src="js/all-FontAwesome.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="js/mobile/checkMobileDevice.js" type="text/javascript"></script>
+    <!-- JS tools check-->
+    <script src="js/tools/webcam.js" type="text/javascript"></script>
+    <script src="js/lib/adapter.js" type="text/javascript"></script>
+    <script src="js/lib/VideoFrame-min.js" type="text/javascript"></script>
+    <!-- JS create data-->
+    <script src="js/data/menu-top.js" type="text/javascript"></script>
+    <script src="js/business/menu-top-func.js" type="text/javascript"></script>    
+    <script src="js/business/postMessage.js" type="text/javascript"></script>
+    <script src="js/lib/DetectBrowser.js" type="text/javascript"></script> 
+
+    <link rel="stylesheet" type="text/css" href="css/webcam.css" />       
+    <!-- My stylesheet
+    <link rel="stylesheet/less/" type="text/less" href="css/layout/webcam.less" />    
+    <link rel="stylesheet/less/" type="text/less" href="css/style/webcam.less" />
+
+    <script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>-->
+
+<body>
+    <div class="banner-top multi-shadow">
+        <div class="logo"><img src="img/logo-web.png" alt="Sửa chữa laptop 24h"
+                title="Suachualaptop24h - Số 1 về dịch vụ sửa chữa laptop"></div>
+        <div class="search">
+            <form class="form-inline" action="/somepage">
+                <svg aria-hidden="true" data-prefix="far" data-icon="search" role="img"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16">
+                    <path
+                        d="M508.5 468.9L387.1 347.5c-2.3-2.3-5.3-3.5-8.5-3.5h-13.2c31.5-36.5 50.6-84 50.6-136C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c52 0 99.5-19.1 136-50.6v13.2c0 3.2 1.3 6.2 3.5 8.5l121.4 121.4c4.7 4.7 12.3 4.7 17 0l22.6-22.6c4.7-4.7 4.7-12.3 0-17zM208 368c-88.4 0-160-71.6-160-160S119.6 48 208 48s160 71.6 160 160-71.6 160-160 160z"
+                        class=""></path>
+                </svg>
+                <input type="text" placeholder="Tìm kiếm" />
+            </form>
+        </div>
+        <div class="order">
+            <a href="#" title="Đặt lịch sửa chữa"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33"
+                    viewBox="0 0 33 33">
+                    <g fill="none">
+                        <path fill="#08D"
+                            d="M15.125 27.156c-.026 0-.052 0-.078-.003-.3-.023-.575-.176-.754-.419l-3.781-5.156c-.337-.46-.237-1.104.223-1.441.457-.336 1.104-.237 1.44.223l3.07 4.187 7.058-7.057c.402-.403 1.055-.403 1.458 0s.403 1.056 0 1.459l-7.906 7.906c-.195.193-.458.301-.73.301z">
+                        </path>
+                        <path fill="#969696"
+                            d="M29.219 33H3.78C1.695 33 0 31.305 0 29.219V6.53c0-2.086 1.695-3.78 3.781-3.78H29.22C31.305 2.75 33 4.444 33 6.53V29.22C33 31.305 31.305 33 29.219 33zM3.78 4.813c-.947 0-1.719.77-1.719 1.718V29.22c0 .947.772 1.718 1.72 1.718h25.437c.947 0 1.718-.77 1.718-1.718V6.53c0-.947-.77-1.718-1.718-1.718H3.78z">
+                        </path>
+                        <path fill="#969696"
+                            d="M31.969 13.063H1.03C.462 13.063 0 12.6 0 12.03c0-.569.462-1.03 1.031-1.03H31.97c.569 0 1.031.461 1.031 1.03 0 .57-.462 1.032-1.031 1.032zM7.906 8.25c-.569 0-1.03-.462-1.03-1.031V1.03C6.875.462 7.336 0 7.905 0c.57 0 1.032.462 1.032 1.031V7.22c0 .569-.462 1.031-1.032 1.031zM25.094 8.25c-.57 0-1.032-.462-1.032-1.031V1.03c0-.569.462-1.031 1.032-1.031.569 0 1.03.462 1.03 1.031V7.22c0 .569-.461 1.031-1.03 1.031z">
+                        </path>
+                    </g>
+                </svg></i></a>
+            <span>
+                <span> Đặt lịch</span><span>Sửa chữa</span>
+            </span>
+        </div>
+        <div class="hotline">
+            <i title="Hotline miễn phí 1800 6024"> <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29"
+                    viewBox="0 0 29 29">
+                    <g fill="#e71b1b">
+                        <path
+                            d="M21.867 19.265c-.94-.928-2.113-.928-3.047 0-.712.706-1.424 1.412-2.125 2.13-.191.198-.353.24-.586.108-.461-.251-.952-.455-1.395-.73-2.065-1.299-3.794-2.968-5.326-4.848-.76-.933-1.437-1.933-1.91-3.058-.095-.227-.078-.377.108-.563.712-.688 1.407-1.394 2.107-2.1.975-.982.975-2.131-.006-3.119-.557-.562-1.113-1.113-1.67-1.675-.575-.575-1.143-1.155-1.724-1.724-.94-.916-2.113-.916-3.046.006-.718.706-1.407 1.43-2.137 2.125C.434 6.457.093 7.24.02 8.157c-.113 1.49.252 2.897.767 4.267 1.053 2.837 2.657 5.357 4.602 7.667 2.628 3.124 5.764 5.596 9.433 7.38 1.652.801 3.364 1.418 5.225 1.52 1.28.071 2.394-.252 3.286-1.251.61-.683 1.299-1.305 1.945-1.958.958-.97.964-2.142.012-3.1-1.137-1.143-2.28-2.28-3.423-3.417zM20.714 15L23 14.601c-.36-2.145-1.35-4.088-2.855-5.633C18.553 7.342 16.54 6.316 14.322 6L14 8.348c1.716.247 3.277 1.038 4.51 2.298 1.164 1.19 1.926 2.696 2.204 4.354zM24.49 4.699C21.982 2.126 18.81.5 15.306 0L15 2.24c3.026.436 5.77 1.843 7.936 4.06 2.055 2.107 3.403 4.77 3.892 7.7L29 13.62c-.571-3.395-2.131-6.475-4.51-8.921z">
+                        </path>
+                    </g>
+                </svg></i>
+            <span>
+                Hotline miễn phí <b>1800 6024</b>
+            </span>
+        </div>
+    </div>
+    <div class="menu-top multi-shadow bg24h">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"><i class="fas fa-home fa-sm"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- Giới thiệu -->
+                    <li class="nav-item dropdown" id="menu-top-gioithieu">
+                        <a class="nav-link" href="https://suachualaptop24h.com/gioi-thieu/gioi-thieu-n6446.html"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Giới thiệu
+                        </a>
+                    </li>
+                    <!-- Dịch vụ -->
+                    <li class="nav-item dropdown" id="menu-top-dichvu">
+                        <a class="nav-link" href="https://suachualaptop24h.com/sua-chua.html" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Dịch vụ
+                        </a>
+                    </li>
+                    <!-- Linh kiện -->
+                    <li class="nav-item dropdown" id="menu-top-linhkien">
+                        <a class="nav-link" href="https://suachualaptop24h.com/linh-kien-laptop-pc618.html"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Linh kiện
+                        </a>
+                    </li>
+                    <!-- Phụ kiện-->
+                    <li class="nav-item dropdown" id="menu-top-phukien">
+                        <a class="nav-link" href="https://suachualaptop24h.com/phu-kien-laptop-pc724.html"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Phụ kiện
+                        </a>
+                    </li>
+                    <!-- Góc chia sẻ-->
+                    <li class="nav-item dropdown" id="menu-top-gocchiase">
+                        <a class="nav-link" href="https://suachualaptop24h.com/goc-chia-se-kn926.html"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Góc chia sẻ
+                        </a>
+                    </li>
+                    <!-- Laptop-->
+                    <li class="nav-item dropdown" id="menu-top-laptop">
+                        <a class="nav-link haspopup" href="https://ap24h.vn/laptop-pc326.html" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Laptop
+                        </a>
+                    </li>
+                    <!-- Báo giá-->
+                    <li class="nav-item dropdown" id="menu-top-baogia">
+                        <a class="nav-link" href="https://suachualaptop24h.com/bao-gia-kn880.html"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Báo giá
+                        </a>
+                    </li>
+                    <!-- Liên hệ-->
+                    <li class="nav-item dropdown" id="menu-top-lienhe">
+                        <a href="https://suachualaptop24h.com/he-thong-cua-hang.html" class="nav-link"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Liên hệ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="main-body">
+        <div class="left-menu">
+            <div class="logo"><img src="img/Sửa chữa laptop 24h.png" alt="Sửa chữa laptop 24h"></div>
+            <div class="menu">
+                <nav class="navbar navbar-expand navbar-light">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="/index.html">Kiểm tra webcam</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/micro.html">Kiểm tra micro</a></li>   
+                            <li class="nav-item"><a class="nav-link" href="/keyboard.html">Kiểm tra bàn phím</a></li>                         
+                            <!--li class="nav-item"><a class="nav-link" href="#">Kiểm tra âm thanh</a></!--li>                            
+                            <li-- class="nav-item"><a class="nav-link" href="#">Kiểm tra chuột</a></li-->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <article class="right-content">
+            <section class="tool-check">
+                <div class="title">Kiểm tra webcam</div>
+                <div class="header">
+                    <img src="img/webcam-1.png" alt="">
+                    <span>Sử dụng công cụ để kiểm tra webcam trực tuyến. Hãy cùng thử để xem webcam của bạn đã được cài
+                        đặt đúng hay
+                        chưa. Các bước kiểm tra như sau:</span>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Nhấp vào nút 'phát'</li>
+                        <li>Nhấn vào “cho phép" nếu thấy hiện bảng câu hỏi.</li>
+                        <li>Bạn sẽ thấy chính mình hoặc bất kỳ cái gì mà webcam đang hướng vào.</li>
+                    </ul>
+                    <p>
+                        <span><b>Chúng tôi tôn trọng quyền riêng tư của bạn</b></span>
+                        <span>Tất cả các bước kiểm tra chúng tôi đều chạy trên thiết bị của bạn - đồng nghĩa với
+                            việc chúng
+                            tôi không và không thể ghi lại hình ảnh của bạn hoặc bất kỳ thông tin nào khác.</span>
+                        <span>Nếu bạn có thể thấy hình ảnh webcam đang chụp trên màn hình của mình tức là nó đang
+                            hoạt
+                            động bình thường! Nếu nó không hoạt động, hãy xem tiếp phần dưới đây.
+                        </span>
+                    </p>
+                </div>
+                <div class="webcam">
+                    <video id="video"></video>
+                    <i id="btnStart" style="color: white;" class="far fa-play-circle fa-10x" onclick="startup()"></i>
+                    <div class="info_FPS"></div>
+                    <div class="error_msg"></div>
+                </div>
+                <div class="qc-1">
+                    <a href="ct-sua-laptop-lay-ngay-trong-01-gio.html"
+                        title="Xem trực tiếp lấy ngay - Miến phí kiểm tra, tư vân">
+                        <img alt="Xem trực tiếp lấy ngay - Miến phí kiểm tra, tư vân"
+                            src="https://suachualaptop24h.com/images/slideshow/2020/12/01/compress2/xem-truc-tiep-lay-ngay_1606813070.jpg.webp"
+                            style="opacity: 1;"> </a>
+                </div>
+            </section>
+            <section class="guide">
+                <div class="title">
+                    <img src="img/webcam-3.png" alt="Hướng dẫn khắc phục sự cố" class="icon" />
+                    <h1>Hướng dẫn khắc phục sự cố</h1>
+                </div>
+                <ul>
+                    <li>
+                        <p><i style="color:rgb(226, 92, 27)" class="fas fa-location-arrow"></i> Nếu bạn nhìn thấy chính
+                            mình trong màn hình và và số <b>FPS</b> (số khung hình trên giây mà webcam đang chụp) thì
+                            máy ảnh của bạn đang hoạt động bình thường.
+                            </b>
+                    </li>
+                    <li>
+                        <p><i style="color:rgb(226, 92, 27)" class="fas fa-location-arrow"></i> Nếu bạn đã nhấn
+                            <b>có</b> khi trình duyệt hiện thông báo có cho phép truy cập không mà bạn vẫn không thấy gì
+                            thì máy ảnh/webcam của bạn đang gặp vấn đề.
+                        </p>
+                    </li>
+                </ul>
+                <img src="img/Sửa chữa laptop 24h.png" alt="">
+                <ul>
+                    <li><i style="color:rgb(226, 92, 27)" class="fas fa-location-arrow"></i> Trường hợp máy ảnh của bạn
+                        đang gặp lỗi trên, hãy thực hiện các bước sau:
+                        <p><b>Bước 1:</b> Nếu bạn sử dụng trình duyệt <i>Safari</i>, hãy thử chuyển sang một trình duyệt
+                            khác. </p>
+                        <p><b>Bước 2:</b>Kiểm tra webcam đã kết nối với <i>ổ cắm USB </i>chưa. Khi thiết bị được kết
+                            nối, một <i>cửa sổ</i> hoặc <i>âm thanh</i> sẽ xuất hiện</p>
+                        <p><b>Bước 3:</b> Một số loại webcam có công tắc “Bật - Tắt" - Bạn hãy đảm bảo rằng nếu có công
+                            tắc thì công tắc này đã ở trạng thái <i>“Bật"</i>.</p>
+                        <p><b>Bước 4:</b> Thử tải xuống trình điều khiển mới nhất cho webcam. Sau đó kiểm tra trên máy
+                            ảnh để biết tên/ số của kiểu máy và tìm kiếm “tên model + trình điều khiển trên Google”. Bạn
+                            sẽ được trỏ tới trang web để tải xuống trình điều khiển mới. </p>
+                    </li>
+                </ul>
+            </section>
+            <section class="moreInformation">
+                <h1>Một số câu hỏi thường gặp:</h1>
+                <div>
+                    <h2>Công cụ kiểm tra này hoạt động như thế này? Cách nó kiểm tra webcam ra sao?</h2>
+                    <p> Tại công cụ kiểm tra này, trình duyệt sẽ yêu cầu quyền xem hình ảnh/video từ webcam trên máy
+                        tính/ điện thoại của bạn và sau đó được chuyển sang màn hình của bạn.
+                    </p>
+                    <p>Kết quả: Nếu bạn thấy video từ máy ảnh của bạn tức nó đang được kết nối và hoạt động bình thường.
+                    </p>
+                </div>
+                <div>
+                    <h2>Tại sao tôi chỉ kiểm tra video và FPS được ghi lại từ máy ảnh trong khi webcam của tôi cũng có
+                        thể ghi lại âm thanh?</h2>
+                    <p>Một số máy ảnh được tích hợp micro. Nhưng vì trường hợp đó không áp dụng với tất cả mọi người nên
+                        chúng tôi quyết định tách âm thanh và video thành hai quá trình kiểm tra khác nhau. Nếu bạn muốn
+                        kiểm tra âm thanh webcam có hoạt động không, hãy truy cập kiểm tra micro của chúng tôi.</p>
+                </div>
+                <div>
+                    <h2>FPS là gì? Nó có quan trọng không?</h2>
+                    <p>FPS được hiểu là số khung hình hoặc hình ảnh mà webcam thu được trên giây. Con số này phụ thuộc
+                        vào loại webcam mà bạn có, cũng như tốc độ máy tính của bạn và số lượng tác vụ mà nó thực hiện
+                        tại thời điểm nhất định.
+                    </p>
+                    <p>
+                        FPS quan trọng bởi con số này càng cao thì video thu được sẽ càng giống và chân thực hơn. Thông
+                        thường, phim trong rạp hoặc các chương trình truyền hình được hiển thị ở khoảng 24 - 30 FPS. Bởi
+                        vậy nếu bạn sử dụng Messenger hay Skype mà máy ảnh có tốc độ FPS thấp hơn 24 thì hình ảnh bên
+                        kia nhìn thấy sẽ giật và hơi đơ.
+                    </p>
+                    <p>
+                        Nếu tốc độ FPS cao hơn nhiều so với mức 30 thì video sẽ trôi chảy hơn và trông cũng giống thật
+                        hơn. Nhìn chung FPS cao hơn là tốt nhưng nó sẽ hơi kỳ lạ so với việc tiếp nhận hình ảnh của mắt
+                        thường khi chúng đã quen với mức 24 - 30 FPS. Nó sẽ trông giống các bộ phim truyền hình hàng
+                        ngày hơn là các bộ phim điện ảnh.
+                    </p>
+                </div>
+                <div>
+                    <h2>Tôi phải làm nếu sau tất cả các bước khắc phục sự cố, webcam vẫn không hoạt động?
+                    </h2>
+                    <p>
+                        Để nắm được nguyên nhân của vấn đề là do webcam hay tới từ máy tính của bạn, chúng tôi khuyên
+                        bạn nên thử webcam của mình trên một máy tính khác và nếu bạn có quyền truy cập, hãy thử một máy
+                        ảnh khác trên máy tính của bạn.
+                    </p>
+                    <p>
+                        Điều này giúp bạn biết rõ hơn những gì đang hoạt động, những gì không hoạt động và cần được khắc
+                        phục.
+                    </p>
+                    <p>
+                        Nếu bạn cho rằng máy ảnh không hoạt động khi đã thử trên các máy tính khác thì hãy liên hệ với
+                        nhân viên hỗ trợ của thương hiệu máy ảnh.
+                    </p>
+                    <p>
+                        Trường hợp máy ảnh đang hoạt động bình thường trên máy tính khác nhưng lại không hoạt động trên
+                        máy tính của bạn thì rất có thể là do sự cố về phần mềm. Bạn có thể liên hệ với chúng tôi tại
+                        <b>Hotline <i>1800 6024</i></b>, chúng tôi sẽ trợ giúp cho bạn một cách nhanh chóng và tận tình
+                        nhất.
+                    </p>
+                </div>
+            </section>
+        </article>
+    </div>
+</body>
+
+</html>

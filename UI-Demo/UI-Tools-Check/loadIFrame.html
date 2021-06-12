@@ -1,0 +1,34 @@
+<script type="text/javascript">
+    function preloadFunc() {
+        let html = document.querySelector('body')
+        html.innerHTML = `<iframe id="my-frame" allow="camera;microphone" frameborder="0" scrolling="no" src="https://hung.demoweb184.xyz/" style="width:100%"></iframe>`;
+    }
+    window.onpaint = preloadFunc();
+    window.addEventListener("message", (event) => {
+        if (event.data.event_id === "tools_check") {
+            let height = event.data.data.height
+            document.querySelector("#my-frame").setAttribute("style",`width:100%;height:${height}`);
+        }
+    })
+</script>
+<script type="text/javascript">    
+    function preloadFunc(){
+        console.log("run")
+        let html = httpGet("https://hung.demoweb184.xyz/");
+        console.log(html)
+        let body = document.querySelector('body')
+        body.innerHTML=html;
+    }
+    window.onpaint =  preloadFunc();
+    function httpGet(theUrl) {
+        try {
+            ("use strict");
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", theUrl, false); // false for synchronous request
+            xmlHttp.send(null);
+            return xmlHttp.responseText;
+        } catch (e) {
+            throw e;
+        }
+    }
+</script>

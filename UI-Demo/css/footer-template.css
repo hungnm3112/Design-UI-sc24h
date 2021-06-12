@@ -1,0 +1,205 @@
+footer.main-footer {
+    max-width: 1170px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 330px;
+    row-gap: 1.5em;
+}
+footer.main-footer .address_content {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+footer.main-footer .address_content h1 {
+    grid-column: 1 / span 4;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+footer.main-footer .address_content .item .info svg {
+    width: 15px;
+    height: auto;
+    margin-right: 5px;
+    fill: #0088de;
+}
+footer.main-footer .address_content .item .info a {
+    font-size: 13.5px;
+    color: #787878;
+    line-height: 30px;
+}
+footer.main-footer .address_content .item .info a:hover {
+    color: #0088de;
+    text-decoration: none;
+}
+footer.main-footer .policy {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+footer.main-footer .policy h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+footer.main-footer .policy ul {
+    padding-inline-start: 0px;
+}
+footer.main-footer .policy ul li {
+    padding-bottom: 0.75rem;
+    list-style: none;
+}
+footer.main-footer .policy ul li a {
+    color: black;
+}
+footer.main-footer .policy ul li a:hover {
+    text-decoration: none;
+}
+footer.main-footer .contact .item {
+    color: white;
+    display: grid;
+    grid-template-columns: 50px auto;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1.5em;
+    border-radius: 10px;
+    align-items: center;
+}
+footer.main-footer .contact .item svg {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+footer.main-footer .contact .item a {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+footer.main-footer .contact .item a:hover {
+    text-decoration: none;
+}
+footer.main-footer .contact .item .text {
+    margin-bottom: 0.5rem;
+}
+footer.main-footer .contact .item:first-child {
+    background-color: #e71b1b;
+}
+footer.main-footer .contact .item:nth-child(2) {
+    background: #0088dd;
+}
+footer.main-footer .contact .item:nth-child(3) {
+    background: #c3c3c3;
+}
+footer.main-footer .contact .time-open {
+    font-style: italic;
+    margin-bottom: 0.5em;
+}
+footer.main-footer .bottom {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem;
+}
+footer.main-footer .bottom .item-l {
+    grid-column: 1 / span 2;
+}
+footer.main-footer .bottom .item-share {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer.main-footer .bottom .item-share svg {
+    width: 30px;
+    height: 30px;
+}
+footer.main-footer .bottom .item-share .share_item {
+    padding: 5px;
+    border-radius: 35px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+footer.main-footer .bottom .item-share .zl svg {
+    width: 45px;
+    height: 45px;
+}
+footer.main-footer .bottom .item-share .yt {
+    background-color: red;
+}
+footer.main-footer .bottom .item-share .yt svg {
+    fill: white;
+}
+footer.main-footer .bottom .item-share .tt {
+    background-color: black;
+}
+footer.main-footer .bottom .item-share .tt svg {
+    fill: white;
+}
+footer.main-footer .bottom .item-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+footer.main-footer .bottom .item-r > img {
+    width: 150px;
+}
+footer.main-footer .bottom .item-r > a {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-center-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.margin-body-24h {
+    margin: 0 auto;
+    max-width: 1170px;
+    background-color: #f6f6f6;
+}
+body {
+    font: 14px/18px Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #f6f6f6 !important;
+}
+@media screen and (max-width: 900px) {
+    footer.main-footer {
+        display: flex;
+        flex-direction: column;
+   }
+    footer.main-footer .address_content {
+        grid-column: 1;
+        grid-template-columns: 1fr;
+   }
+    footer.main-footer .address_content h1 {
+        grid-column: 1;
+   }
+    footer.main-footer .policy {
+        display: flex;
+        flex-direction: column;
+   }
+    footer.main-footer .policy h1 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+   }
+    footer.main-footer .policy ul {
+        display: none;
+   }
+    footer.main-footer .bottom {
+        display: flex;
+        flex-direction: column;
+   }
+}
