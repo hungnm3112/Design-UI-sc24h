@@ -120,7 +120,7 @@ footer.main-footer .bottom .item-share .share_item {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 footer.main-footer .bottom .item-share .zl svg {
     width: 45px;
@@ -199,7 +199,17 @@ body {
         display: none;
    }
     footer.main-footer .bottom {
+        display: grid;
+        grid-template-columns: 50% 50%;
+   }
+    footer.main-footer .bottom .item-share {
+        grid-column: 2;
+   }
+    footer.main-footer .bottom .item-r {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;      
+        padding-bottom: 60px;
    }
 }
+

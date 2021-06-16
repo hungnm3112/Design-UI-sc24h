@@ -2,25 +2,51 @@
     display: grid;
     grid-template-columns: auto 900px auto;
     .table{
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: 70px 70px 1fr;
+        div{
+            border: 1px solid rgb(128, 132, 133);
+            padding: 1em 1rem;
+        }
         a{
             text-decoration: none;
         }
-        grid-column: 2;
-        display: grid;
-        grid-template-columns: 40px 4fr 1fr;
-        row-gap: 1em;
-        column-gap: 1em;
+        img{
+            width: 100%;            
+        }        
         >div{
             text-align: center;
         }
-        >div:nth-child(3n+6){
+        div:nth-child(3n+6){
             text-align: justify;
         }
         .header{
             grid-column: 1/ span 3;
+            padding-left: 0;
+            text-align: justify;
         }
         .title{
             font-weight: 600;            
+        }
+    }
+    ul>li{
+        display:flex;
+        flex-direction: row;
+        align-items: center;        
+        .notification {    
+            width: 0px;
+            height: 0px;
+            background-color: red;
+            border-radius: 35px;        
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .icon-ml-fix{
+            width: 30px;
+            height: 30px;
+            padding: 3px;
         }
     }
 }

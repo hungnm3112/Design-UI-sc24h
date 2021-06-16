@@ -5,9 +5,6 @@
     display: grid;
     grid-template-columns: 3fr 4fr 2fr 2fr;
 }
-.banner-top > div {
-    height: 80px;
-}
 .banner-top .logo {
     display: flex;
     align-items: center;
@@ -156,86 +153,111 @@
 .menu-top nav #navbarNavDropdown > ul > li:first-child > a {
     padding: 16px 10px 10px 18px;
 }
+.menu-top nav .shopping-cart {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-top nav .shopping-cart svg {
+    display: block;
+    margin-right: 0.5rem;
+}
 @media screen and (max-width: 900px) {
-    body {
+    .main-top {
         display: grid;
         grid-template-columns: 80% 20%;
+        height: min-content;
    }
-    body div.banner-top {
+    .main-top div.banner-top {
         grid-template-columns: 100%;
         grid-column: 1;
+        height: fit-content;
    }
-    body div.banner-top div.logo img.logo-img {
+    .main-top div.banner-top div.logo img.logo-img {
         display: none;
    }
-    body div.banner-top div.logo img.logo-img-small {
+    .main-top div.banner-top div.logo img.logo-img-small {
         display: block;
         width: 90%;
    }
-    body div.banner-top div.order, body div.banner-top div.hotline {
+    .main-top div.banner-top div.order, .main-top div.banner-top div.hotline {
         display: none;
    }
-    body div.banner-top div.search {
+    .main-top div.banner-top div.search {
         display: none;
         position: absolute;
         top: 64px;
         left: calc(-37.5%);
    }
-    body div.banner-top div.search input {
+    .main-top div.banner-top div.search input {
         border-top: 1px solid #adadad;
         border-right: 1px solid #adadad;
    }
-    body div.banner-top div.search svg {
+    .main-top div.banner-top div.search svg {
         border-top: 1px solid #adadad;
         border-left: 1px solid #adadad;
         padding-left: 9px;
         width: 26px;
    }
-    body .menu-top {
+    .main-top .menu-top {
+        background-color: #f6f6f6;
+        height: fit-content;
         display: flex;
         align-items: center;
         justify-content: center;
    }
-    body .menu-top svg {
+    .main-top .menu-top .shopping-cart {
+        display: none;
+   }
+    .main-top .menu-top svg {
         display: inline-block;
         font-size: 19px;
+        background-color: #f6f6f6;
    }
-    body .menu-top nav button {
+    .main-top .menu-top nav {
+        display: grid;
+        grid-template-columns: auto auto;
+   }
+    .main-top .menu-top nav button {
         border: none;
    }
-    body .menu-top nav #navbarNavDropdown {
+    .main-top .menu-top nav .navbar-brand {
+        margin-right: 0;
+   }
+    .main-top .menu-top nav #navbarNavDropdown {
         position: fixed;
         left: 0;
         top: 66px;
         width: 100%;
    }
-    body .menu-top nav #navbarNavDropdown ul li div.icon-toggle {
+    .main-top .menu-top nav #navbarNavDropdown ul li div.icon-toggle {
         display: flex;
         align-items: center;
         padding: 0 0.5rem;
         background-color: white;
    }
-    body .menu-top nav #navbarNavDropdown ul li div.icon-toggle svg path {
+    .main-top .menu-top nav #navbarNavDropdown ul li div.icon-toggle svg path {
         fill: #0088de;
    }
-    body .menu-top nav #navbarNavDropdown > ul > li:first-child {
+    .main-top .menu-top nav #navbarNavDropdown > ul > li:first-child {
         display: none;
    }
-    body .menu-top nav #navbarNavDropdown > ul li>div.icon-toggle {
+    .main-top .menu-top nav #navbarNavDropdown > ul li > div.icon-toggle {
         background-color: #0088de;
    }
-    body .menu-top nav #navbarNavDropdown > ul li>div.icon-toggle svg path {
+    .main-top .menu-top nav #navbarNavDropdown > ul li > div.icon-toggle svg path {
         fill: white;
    }
 }
-div.menu-top nav div#navbarNavDropdown li.dropdown-submenu > a {
-    pointer-events: unset;
+.menu-top-relative {
+    position: relative;
 }
-div.menu-top nav div#navbarNavDropdown li.dropdown-submenu:hover > ul.dropdown-menu {
-    display: block;
-}
-div.menu-top nav div#navbarNavDropdown li.nav-item:hover > ul.dropdown-menu {
-    display: block;
+.menu-top-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
 }
 .flex-center {
     display: flex;
@@ -258,4 +280,14 @@ body {
     padding: 0;
     width: 100%;
     background: #f6f6f6 !important;
+    height: 3000px;
+}
+div.menu-top nav div#navbarNavDropdown li.dropdown-submenu > a {
+    pointer-events: unset;
+}
+div.menu-top nav div#navbarNavDropdown li.dropdown-submenu:hover > ul.dropdown-menu {
+    display: block;
+}
+div.menu-top nav div#navbarNavDropdown li.nav-item:hover > ul.dropdown-menu {
+    display: block;
 }

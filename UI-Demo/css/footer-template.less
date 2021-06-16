@@ -123,7 +123,7 @@ footer.main-footer {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 10px;
+        margin: 0 5px;
       }
       .zl {
         svg {
@@ -184,8 +184,17 @@ footer.main-footer {
       }   
     }    
     .bottom {
-      display:flex;
-      flex-direction: column;      
+      display: grid;
+      grid-template-columns: 50% 50%;      
+      .item-share {
+        grid-column: 2;
+      }
+      .item-r {
+        display: flex;
+        flex-direction: row;  
+        justify-content: space-between;      
+        padding-bottom: 60px;
+      }   
     }
   }
 }

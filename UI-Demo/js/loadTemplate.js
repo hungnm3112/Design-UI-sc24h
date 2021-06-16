@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let divTop = document.querySelector(".main-top");
   let strHtml = httpGet(`https://hung.demoweb184.xyz/UI-Demo/header-template.html`);  
   divTop.innerHTML = strHtml;
-  let footer = document.querySelector('footer.main-footer')
+  let footer = document.querySelector('div.main-bottom')
   strHtml = httpGet('https://hung.demoweb184.xyz/UI-Demo/footer-template.html')
   footer.innerHTML = strHtml;
 });
