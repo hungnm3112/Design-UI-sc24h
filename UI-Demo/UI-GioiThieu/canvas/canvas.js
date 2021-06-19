@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let ctx = canvas.getContext("2d");
       let gradient = ctx.createLinearGradient(20, 0, 220, 0);
       // Add three color stops
-      gradient.addColorStop(0, "green");
-      gradient.addColorStop(0.5, "cyan");
-      gradient.addColorStop(1, "green");
+      gradient.addColorStop(0, "#0088de");      
+      gradient.addColorStop(1, "#71b7e3");
       //line box
       ctx.beginPath();
       ctx.moveTo(14, 20);

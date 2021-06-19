@@ -1,7 +1,8 @@
 // menu float for event scroll
-function FloatMenuTop(menu,offsetHeight) {
-  let statusMenu = sessionStorage.getItem("statusMenu") || "isRelative";
-  console.log(statusMenu);
+var statusMenu = "isRelative";
+function FloatMenuTop(menu, offsetHeight) {
+  // let statusMenu = sessionStorage.getItem("statusMenu") || "isRelative";
+  //console.log(statusMenu);
   if (statusMenu === "isRelative") {
     let anchor = document.querySelector(".anchor");
     let vpOffset = anchor.getBoundingClientRect();
@@ -9,16 +10,18 @@ function FloatMenuTop(menu,offsetHeight) {
     if (vpOffset.top < 0 - offsetHeight) {
       menu.classList.remove("menu-top-relative");
       menu.classList.add("menu-top-fixed");
-      sessionStorage.setItem("statusMenu", "isFixed");
+      // sessionStorage.setItem("statusMenu", "isFixed");
+      statusMenu = "isFixed";
     }
   } else {
     let anchor = document.querySelector(".anchor");
     let vpOffset = anchor.getBoundingClientRect();
-    console.log(vpOffset);
+    //console.log(vpOffset);
     if (vpOffset.top >= 0 - offsetHeight) {
       menu.classList.add("menu-top-relative");
       menu.classList.remove("menu-top-fixed");
-      sessionStorage.setItem("statusMenu", "isRelative");
+      // sessionStorage.setItem("statusMenu", "isRelative");
+      statusMenu = "isRelative";
     }
   }
 }
@@ -34,25 +37,29 @@ function createMenuTop() {
     </svg>`;
 }
 function addEvent() {
-  //Event show công cụ tìm kiếm trên giao diện mobile
-  document
-    .querySelector(".menu-top>nav>a>svg")
-    .addEventListener("click", () => {
-      document.querySelector(`.search`).setAttribute("style", "display:block");
-    });
   //Float menu menu top
   window.addEventListener("scroll", () => {
-      if(Checker.isMobileLK()){
-        let menu = document.querySelector(".main-top");
-        FloatMenuTop(menu,300);
-      }else{
-        let menu = document.querySelector(".menu-top");
-        FloatMenuTop(menu,520);
-      }
-    
+    if (Checker.isMobileLK()) {
+      let menu = document.querySelector(".main-top");
+      FloatMenuTop(menu, 300);
+    } else {
+      let menu = document.querySelector(".menu-top");
+      FloatMenuTop(menu, 520);
+    }
   });
 }
 document.addEventListener("DOMContentLoaded", () => {
   //createMenuTop();
   addEvent();
 });
+
+//Event show công cụ tìm kiếm trên giao diện mobile
+function showSearch() {
+  let search = document.querySelector(`.search`)
+  let style = search.getAttribute("style")
+  if(style==="display:flex"){
+    search.setAttribute("style","display:none")
+  }else{
+    search.setAttribute("style","display:flex")
+  }
+}

@@ -172,7 +172,7 @@
     .main-top div.banner-top {
         grid-template-columns: 100%;
         grid-column: 1;
-        height: fit-content;
+        height: 45px;
    }
     .main-top div.banner-top div.logo img.logo-img {
         display: none;
@@ -188,7 +188,8 @@
         display: none;
         position: absolute;
         top: 64px;
-        left: calc(-37.5%);
+        left: 25vw;
+        background: #f6f6f6;
    }
     .main-top div.banner-top div.search input {
         border-top: 1px solid #adadad;
@@ -202,7 +203,7 @@
    }
     .main-top .menu-top {
         background-color: #f6f6f6;
-        height: fit-content;
+        height: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -258,6 +259,7 @@
     top: 0;
     width: 100%;
     height: auto;
+    z-index: 9;
 }
 .flex-center {
     display: flex;

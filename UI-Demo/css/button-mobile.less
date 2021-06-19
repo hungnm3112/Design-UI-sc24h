@@ -1,0 +1,187 @@
+@media screen and (max-width: 900px) {
+  .wrapper {
+    width: 100%;
+    height: @height-btn-func;
+    position: fixed;
+    bottom: 0px;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    > div.btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > div.circle-masking {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > div {
+          height: calc(@height-btn-func - (1.5 * @wrapper-2-pad));
+          width: calc(@height-btn-func - (1.5 * @wrapper-2-pad));
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &:nth-child(1) {
+        > div.circle-masking {
+          > div {
+            height: 32px;
+            width: 32px;        
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;    
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+              rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          }
+        }
+      }
+      &:nth-child(2) {
+        > div.circle-masking {
+          > div {
+            height: auto;
+            width: auto;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            background-color: white;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+              rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            svg {
+              width: 30px;
+            }
+          }
+        }
+      }
+      &:nth-child(4) {
+        > div.circle-masking {
+          > div {
+            height: 18px;
+            width: auto;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            background-color: white;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+              rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            svg {
+              width: 30px;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        > div.circle-masking {
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(@height-btn-func - (@wrapper-2-pad));
+            width: calc(@height-btn-func - (@wrapper-2-pad));
+            svg {
+              
+            }
+          }
+        }
+      }
+      &:nth-child(5) {
+        > div.circle-masking {
+          width: 40px;
+          height: 40px;          
+        }
+      }
+    }
+  }
+  .book_calendar {
+    display: none;
+    position: fixed;
+    background-color: white;
+    right: 5px;
+    top: 52px;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+.button-mobile {
+  height: fit-content;
+}
+.btn-shine {
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background: linear-gradient(to right, #4d4d4d 0, white 10%, #f00d0d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  margin-right: -2.9rem;
+}
+
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+@background-color-btn-chat: rgb(252, 156, 29);
+@white: #faf0e6;
+@height-btn-func: 60px;
+@wrapper-2-pad: 10px;
