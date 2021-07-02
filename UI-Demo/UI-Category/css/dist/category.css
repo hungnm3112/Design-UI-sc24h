@@ -1,0 +1,97 @@
+@media screen and (max-width: 900px) {
+  .main-body {
+    margin-bottom: 2em;
+    background-color: #f6f6f6;
+    display: grid;
+    grid-template-columns: 5px auto 5px;
+    row-gap: 10px;
+  }
+  .main-body > div {
+    grid-column: 2;
+    background-color: white;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  .main-body #carousel-content {
+    width: 100%;
+    max-width: 1170px;
+    height: 200px;
+  }
+  .main-body #carousel-content .carousel-indicators {
+    bottom: 16px;
+    margin: 0;
+    height: 0;
+    background-color: white;
+  }
+  .main-body #carousel-content .carousel-indicators > li {
+    background-color: red;
+  }
+  .main-body #carousel-content .carousel-inner {
+    width: 100%;
+    height: 95%;
+  }
+  .main-body #carousel-content .carousel-inner .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
+  .main-body #carousel-content .carousel-inner .carousel-item > div:first-child {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+  }
+  .main-body .event-covid {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    height: 60px;
+  }
+  .main-body .icon-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .main-body .icon-menu a {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-body .icon-menu a svg {
+    width: 30px;
+    height: 30px;
+  }
+  .main-body .icon-menu a svg path {
+    fill: #444;
+  }
+  .main-body .icon-menu a .text-menu {
+    font: 14px/18px Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
+    color: #444;
+  }
+}
+.cover-img-background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  font: 14px/18px Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
+}
+
+/*# sourceMappingURL=category.css.map */

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linh kiện</title>
+    <!-- FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <script defer src="../js/all-FontAwesome.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- JS Template-->
+    <script src="/UI-Demo/js/header-template.js"></script>
+    <script src="/UI-Demo/js/button-mobile.js"></script>
+    <script src="/UI-Demo/js/loadTemplate.js"></script>
+    <!-- JS Object-->
+    <script src="/UI-Demo/js/class/Checker.js" type="text/javascript"></script>
+    <script src="/UI-Demo/js/class/Connector.js" type="text/javascript"></script>
+    <script src="/UI-Demo/js/class/Address.js" type="text/javascript"></script>
+
+    <!-- My stylesheet -->
+    <link rel="stylesheet/less/" type="text/less"
+        href="/UI-Demo/UI-Category/css/category.less" />
+
+    <script src="https://cdn.jsdelivr.net/npm/less@3.13"></script>
+</head>
+
+<body>
+    <div class="main-header"></div>
+    <div class="main-body">
+        <div id="carousel-content" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-content" data-slide-to="0">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="1">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="2">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="3">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="4">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="5">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="6">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="7">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="8">
+                </li>
+                <li data-target="#carousel-content" data-slide-to="9">
+                </li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div style="background-image:url('img/Ve-chung-toi-0.jpg')"
+                        alt="Sứ mệnh - Tầm nhìn"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-3.jpg')"
+                        alt="Trải nghiệm khách hàng"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-6.jpg')"
+                        alt="Lịch sử hình thành & phát triển"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-7.jpg')"
+                        alt="Hoạt động - Việc tử tế"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-0.jpg')"
+                        alt="Sứ mệnh - Tầm nhìn"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-3.jpg')"
+                        alt="Trải nghiệm khách hàng"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-6.jpg')"
+                        alt="Lịch sử hình thành & phát triển"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-7.jpg')"
+                        alt="Hoạt động - Việc tử tế"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-0.jpg')"
+                        alt="Sứ mệnh - Tầm nhìn"></div>
+                </div>
+                <div class="carousel-item">
+                    <div style="background-image:url('img/Ve-chung-toi-3.jpg')"
+                        alt="Trải nghiệm khách hàng"></div>
+                </div>
+            </div>
+        </div>
+        <div class="event-covid" style="background-image:url('img/sua-laptop-tan-nha.jpeg')">            
+        </div>
+        <div class="icon-menu">
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-keyboard" role="tab"
+                aria-controls="v-pills-home" aria-selected="true">
+                <i class="fas fa-keyboard fa-lg"></i>
+                <div class="text-menu">Bàn phím</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-hdd" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="fas fa-hdd fa-lg"></i>
+                <div class="text-menu">Ổ cứng</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-ram" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="fas fa-memory fa-lg"></i>
+                <div class="text-menu">RAM</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-cpuFan" role="tab" aria-controls="v-pills-home"
+                aria-selected="true"><i class="fas fa-fan fa-lg"></i>
+                <div class="text-menu">Quạt tản nhiệt</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-cardwifi" role="tab"
+                aria-controls="v-pills-home" aria-selected="true">
+                <i class="fas fa-wifi fa-lg"></i>
+                <div class="text-menu">Card wifi</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-usb" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="fab fa-usb fa-lg"></i>
+                <div class="text-menu">USB</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-speaker" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="fas fa-volume-up fa-lg"></i>
+                <div class="text-menu">Loa Laptop</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-adapter" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="fas fa-charging-station fa-lg"></i>
+                <div class="text-menu">Sạc laptop</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-battery" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="fas fa-battery-full fa-lg"></i>
+                <div class="text-menu">Pin laptop</div>
+              </a>
+            </div>
+            <div class="item">
+              <a id="hdd-tab" data-toggle="tab" href="#v-lcd" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="fas fa-tablet-alt fa-lg"></i>
+                <div class="text-menu">Màn hình laptop</div>
+              </a>
+            </div>
+          </div>
+    </div>
+    <div class="main-bottom"></div>
+    <div class="button-mobile"></div>
+</body>
+
+</html>
