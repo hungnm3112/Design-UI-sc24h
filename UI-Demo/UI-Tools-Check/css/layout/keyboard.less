@@ -120,6 +120,14 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-gap: 1em;
+        svg{
+          display:block;
+        }
+        span{
+          img{
+            display: none;            
+          }
+        }
       }
       .keyboard {
         width: 70em;
@@ -426,12 +434,21 @@
           }
         }
       }
-      .qc-1 {
+      .qc-pc {
         grid-column: 1 / span 2;
         margin-top: 3em;
         .flex-center;
         img {
-          height: 10em;
+          height: 160px;
+        }
+      }
+      .qc-mobile{        
+        grid-column: 1 / span 2;
+        margin-top: 3em;
+        .flex-center;
+        display:none;
+        img {
+          height: 160px;
         }
       }
     }
@@ -497,4 +514,91 @@
   background: none;
   margin: auto;
   display: block;
+}
+
+@media screen and (max-width:960px){
+  .main-body{    
+    .left-menu{
+      grid-column: 1/ span 4;
+      .title{
+        grid-column: 1/ span 2;
+      }
+    }
+    .right-content{
+      grid-column: 1/ span 4;      
+      .tool-check{
+        .title{
+          grid-column: 1/ span 2;
+          text-align: center;
+        }
+        .header{
+          text-align: justify;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;      
+          svg{
+            display:none;
+          }
+          span{
+            img{
+              display: block;
+              width: 1.4em;
+            }
+          }                               
+        }
+        .description{
+          grid-column: 1/ span 2;
+          padding-right: 0;
+          span{
+            text-align: justify;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+          }
+        }
+        .webcam{
+          grid-column: 1/ span 2;
+          height:300px;
+          padding-right: 0;
+          margin: auto;
+        }
+        .qc-pc {
+          display:none !important;
+        }
+        .qc-mobile{
+          display: flex;        
+        }
+      }      
+      .guide {
+        .title{
+          grid-template-columns: 15% 85%;
+          grid-row: 1;
+          img{
+            height: 3em;
+            grid-column: 1;
+            grid-row: 1;
+          }          
+          h1{
+            grid-column: 2;
+          }
+        }
+        img{
+          grid-column: 1 / span 2;
+          grid-row: 3;
+        }
+        ul{
+          grid-column: 1 / span 2;  
+          grid-row: 2;
+          padding-right: 0.75rem;
+          padding-left: 0.75rem;
+          &:last-child {
+            grid-column: 1 / span 2;
+            grid-row: 4;
+          }          
+        }
+      }
+      .moreInformation{
+        width: 100%;
+        padding: 0 0.75em;
+      }
+    }    
+  }
 }
