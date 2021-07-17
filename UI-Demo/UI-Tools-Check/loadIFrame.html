@@ -8,14 +8,20 @@
     window.addEventListener("message", (event) => {
         if (event.data.event_id === "tools_check") {
             let height = event.data.data.height
-            document.querySelector("#my-frame").setAttribute("style",`width:100%;height:${height}`);            
+            document.querySelector("#my-frame").setAttribute("style",`width:100%;height:${height}`);
+            console.log("clientHeight:"+event.data.data.clientHeight)
+            console.log("scrollHeight:"+event.data.data.scrollHeight)
+            console.log(httpGet("https://hung.demoweb184.xyz/UI-Demo/UI-Tools-Check/webcam.html"))
         }
-    })        
-    document.addEventListener("DOMContentLoaded",()=>{
-        let div = document.createElement('div');
-        div.innerHTML = parseFloat(getComputedStyle(document.querySelector('.cls.bg_white')).fontSize);
-        document.querySelector('body').appendChild(div)
-    })
+    })            
+    function httpGet(url){
+        let http = XMLHttpRequest()
+        http.open("GET",url,false)
+        http.send(null)
+        let div = document.createElement('div')
+        div.innerHTML = http.responseText;
+        return div.firstChild
+    }
 </script>
 <!--keyboard-->
 <script type="text/javascript">
@@ -29,10 +35,5 @@
             let height = event.data.data.height
             document.querySelector("#my-frame").setAttribute("style",`width:100%;height:${height}`);            
         }
-    })        
-    document.addEventListener("DOMContentLoaded",()=>{
-        let div = document.createElement('div');
-        div.innerHTML = parseFloat(getComputedStyle(document.querySelector('.cls.bg_white')).fontSize);
-        document.querySelector('body').appendChild(div)
-    })
+    })            
 </script>
