@@ -1,0 +1,73 @@
+.download-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 20px;
+}
+
+.download-content .card-content {
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    background: #0097fe;
+    box-shadow: 0 15px 35px rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.download-content .card-content a {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-content .card-content a .img img {
+    width: 150px;
+    height: 150px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid #4ac5d5;
+}
+
+.download-content .card-content a .text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.download-content .card-content a .text .title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0px 5px 0px;
+}
+
+.download-content .card-content a .text .desc {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.download-content .card-content a .icon {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+}
+
+.download-content .card-content a .icon li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(30px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.1s * var(--i));
+}
